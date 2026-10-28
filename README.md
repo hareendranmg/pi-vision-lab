@@ -55,6 +55,7 @@ Full instructions, troubleshooting and VNC access are in **[docs/SETUP.md](docs/
 
 | Document | Contents |
 |---|---|
+| [**How It Works (PDF)**](docs/Pi_Vision_Lab_How_It_Works.pdf) | A 15-page illustrated overview of the technology for technical readers: models, detection and tracking, gestures, effects, the 3D presenter, performance. No code. |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System diagram, threads, the vision pipeline (and why not MediaPipe), gestures, rendering, performance numbers |
 | [docs/SETUP.md](docs/SETUP.md) | Hardware, OS, the one-shot installer step by step, displays, VNC, kiosk control, troubleshooting |
 | [docs/PRESENTER.md](docs/PRESENTER.md) | How the 3D presenter was built: avatar assembly, face projection, retargeting, rendering, the commentary engine, rebuilding |
