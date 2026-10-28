@@ -1,0 +1,36 @@
+{
+  "masquerade": {
+    "file": "masquerade.png",
+    "anchor": "eyes",
+    "left_eye": [
+      133.17499161917533,
+      516.2752262822662
+    ],
+    "right_eye": [
+      344.5507425742574,
+      512.7210705445544
+    ]
+  },
+  "crown": {
+    "file": "crown.png",
+    "anchor": "head",
+    "bottom_center": [
+      317.5,
+      620.8
+    ]
+  },
+  "_credits": [
+    {
+      "file": "masquerade.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Carnival_Masquerade_Mask.png",
+      "author": "Alexas_Fotos (Pixabay)",
+      "license": "CC0"
+    },
+    {
+      "file": "crown.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Replica_of_Crown_of_Wilhelm_II_002.png",
+      "author": "Gryffindor",
+      "license": "CC BY-SA 3.0"
+    }
+  ]
+}

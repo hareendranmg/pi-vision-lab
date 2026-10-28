@@ -1,0 +1,19 @@
+{
+ "fps": 30,
+ "size": [
+  300,
+  540
+ ],
+ "clips": {
+  "excited": 192,
+  "idle": 238,
+  "present": 202,
+  "talk1": 160,
+  "talk2": 168,
+  "turn_in": 71,
+  "turn_out": 71,
+  "walk_in": 37,
+  "walk_out": 37,
+  "wave": 86
+ }
+}

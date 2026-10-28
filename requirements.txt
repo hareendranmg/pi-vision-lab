@@ -1,0 +1,5 @@
+# Install into a venv created with --system-site-packages so the apt-provided
+# picamera2 / libcamera / numpy stay visible (see setup.sh).
+ai-edge-litert==2.3.0
+opencv-contrib-python==5.0.0.93
+PySide6-Essentials==6.12.0

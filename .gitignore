@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Downloaded at setup (scripts/download_models.sh)
+models/
+testimg/
+
+# Rocketbox sources, downloaded by presenter_src/fetch_rocketbox.sh
+presenter_src/Male_Adult_*/
+presenter_src/anims/
+presenter_src/avatar/
+presenter_src/rajaram/debug_*.png
+
+# Runtime
+*.log

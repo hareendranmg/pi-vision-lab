@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Pi Vision Lab
+Comment=Gesture-controlled AI demo kiosk
+Exec=@APP_DIR@/run.sh
+Terminal=false
+X-GNOME-Autostart-enabled=true
