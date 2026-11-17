@@ -48,6 +48,8 @@ Rajaram walks in a few seconds later, once his frames are loaded.
 
 ## Kiosk control
 
+To switch the Pi off, use the **power button** in the top-right corner of the Home screen: it asks for confirmation, the presenter waves goodbye and the Pi powers off. Wait for the green light to stop flashing before unplugging. Because the app runs inside the logged-in desktop session, no password is needed.
+
 `run.sh` keeps the app running: it restarts 3 s after any exit. Logs go to `~/.cache/pi_vision_lab.log`.
 
 ```bash
