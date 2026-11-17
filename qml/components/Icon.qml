@@ -41,6 +41,10 @@ Canvas {
             g.globalAlpha = 0.8
             for (const p of spots) { g.fillStyle = p[2]; g.beginPath(); g.arc(p[0], p[1], r, 0, Math.PI * 2); g.fill() }
             g.globalAlpha = 1
+        } else if (name === "power") {
+            // Ring open at the top with a vertical bar.
+            g.beginPath(); g.arc(cx, cy + s * 0.04, s * 0.32, -Math.PI / 2 + 0.75, 3 * Math.PI / 2 - 0.75); g.stroke()
+            g.beginPath(); g.moveTo(cx, cy - s * 0.4); g.lineTo(cx, cy - s * 0.02); g.stroke()
         } else if (name === "back") {
             g.beginPath(); g.moveTo(w * 0.62, h * 0.2); g.lineTo(w * 0.3, h * 0.5); g.lineTo(w * 0.62, h * 0.8); g.stroke()
         } else if (name === "hand") {

@@ -23,6 +23,7 @@ def main():
     from .backend import Backend  # registers CameraView with QML
     from .control import ControlServer
     from .engine import VisionWorker
+    from .power import Power
     from .presenter import Presenter  # registers PresenterView with QML
 
     app = QGuiApplication(sys.argv)
@@ -33,6 +34,7 @@ def main():
     clips = ROOT / "assets" / "presenter"
     presenter = Presenter(clips) if (clips / "clips.json").exists() else None
     backend = Backend(worker, presenter)
+    power = Power(presenter)
 
     kiosk = not (args.windowed or args.shots)
     w, h = (int(v) for v in args.size.split("x"))
@@ -40,6 +42,7 @@ def main():
     ctx = engine.rootContext()
     ctx.setContextProperty("backend", backend)
     ctx.setContextProperty("presenter", presenter)
+    ctx.setContextProperty("power", power)
     ctx.setContextProperty("kiosk", kiosk)
     ctx.setContextProperty("startSize", [w, h])
     engine.load(str(ROOT / "qml" / "Main.qml"))

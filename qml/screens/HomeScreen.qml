@@ -58,4 +58,30 @@ Item {
             onClicked: win.screen = "color"
         }
     }
+
+    // Power: opens the shut-down confirmation (Main.qml's PowerDialog).
+    Rectangle {
+        anchors.right: parent.right; anchors.top: parent.top
+        anchors.margins: 14 * home.u
+        width: 46 * home.u; height: width; radius: width / 2
+        color: powerArea.containsMouse ? Qt.rgba(1, 0.42, 0.29, 0.28) : Qt.rgba(0, 0, 0, 0.45)
+        border.width: 1.5 * home.u
+        border.color: powerArea.containsMouse ? "#ff6b4a" : Qt.rgba(1, 1, 1, 0.25)
+        scale: powerArea.pressed ? 0.92 : (powerArea.containsMouse ? 1.08 : 1)
+        Behavior on scale { NumberAnimation { duration: 120 } }
+        Icon {
+            anchors.centerIn: parent
+            name: "power"
+            color: powerArea.containsMouse ? "#ff8a65" : "#c9d1e3"
+            width: 24 * home.u; height: width
+            stroke: 2.5 * home.u
+        }
+        MouseArea {
+            id: powerArea
+            anchors.fill: parent
+            anchors.margins: -8 * home.u  // forgiving target for the air cursor
+            hoverEnabled: true
+            onClicked: powerDialog.asking = true
+        }
+    }
 }

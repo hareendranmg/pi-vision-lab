@@ -54,6 +54,11 @@ Window {
         visible: win.screen === "home"
     }
 
+    PowerDialog {
+        id: powerDialog
+        z: 90
+    }
+
     AirCursor {
         accent: win.accent
         z: 100

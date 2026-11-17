@@ -31,6 +31,7 @@ WAYLAND_DISPLAY=wayland-0 XDG_RUNTIME_DIR=/run/user/1000 grim /tmp/screen.png   
 | `shot <png>` | grab the app window |
 | `frame <jpg>` | save the un-mirrored camera frame |
 | `state` | JSON of the latest vision state |
+| `power` | whether the app may power off (`yes` / `challenge` / `no`), checked with logind *without* shutting down |
 
 ## Running without a camera or display
 
@@ -69,6 +70,7 @@ app/
   presenter.py    clip preload/player, choreography state machine, PresenterView
   commentary.py   what the presenter says
   control.py      test-control socket
+  power.py        on-screen shut down (systemctl poweroff, logind check)
 qml/
   Main.qml        window, camera background, screen loader, presenter, air cursor
   screens/        HomeScreen, ObjectsScreen, FaceScreen, ColorScreen
@@ -82,6 +84,7 @@ qml/
 - **Gesture tuning:** the thresholds are constants at the top of `app/gesture.py` (`PINCH_DOWN/UP`, `ACTIVE`, `FIST_HOLD_S`, …).
 - **Presenter placement or size:** `HOME_X`, `HEIGHT_FRAC` and `LEAVE_AFTER_S` in `app/presenter.py`.
 - **Inference threads:** environment variable `PIV_THREADS` (default 3).
+- **Testing the shut-down button:** run with `PIV_SHUTDOWN_CMD=true` (or any harmless command) so the flow completes without powering off; a failing command shows its error in the dialog.
 
 ## Branches
 
