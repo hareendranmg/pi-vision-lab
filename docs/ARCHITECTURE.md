@@ -43,6 +43,7 @@ flowchart LR
 | Qt bridge | `app/backend.py` | Exposes state to QML; turns the air cursor into real mouse events; `CameraView` |
 | Presenter | `app/presenter.py`, `app/commentary.py` | Plays Rajaram's clips and decides what he says |
 | GPU frame item | `app/frameitem.py` | `QQuickItem` + `QSGSimpleTextureNode` so the GPU scales frames |
+| Shut down | `app/power.py`, `qml/components/PowerDialog.qml` | Confirmed `systemctl poweroff` from the desktop session (no password), errors shown on screen |
 | Test control | `app/control.py` | Local socket: switch screens, tap, set effects, screenshots, state dump |
 | UI | `qml/Main.qml`, `qml/screens/*`, `qml/components/*` | Screens, tiles, air cursor, speech bubble |
 

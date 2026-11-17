@@ -6,6 +6,7 @@
   shot <path.png>                        save a screenshot of the window
   frame <path.jpg>                       save the raw (un-mirrored) camera frame
   state                                  JSON of the latest vision state
+  power                                  may this app power off? (yes / challenge / no), without doing it
 """
 import json
 
@@ -50,6 +51,9 @@ class ControlServer:
             b.tap(float(args[0]), float(args[1]))
         elif cmd == "shot":
             return "ok" if self.win.grabWindow().save(args[0]) else "error: save failed"
+        elif cmd == "power":
+            from .power import can_power_off
+            return can_power_off()
         elif cmd == "frame":
             import cv2
             frame = b.worker.snapshot()

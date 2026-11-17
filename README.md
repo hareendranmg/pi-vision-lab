@@ -27,7 +27,7 @@ masquerade, crown, smoked shades, glam make-up, ice eyes and the AI mesh.
 | **Face Magic** | Mood (smile, surprise, wink, sleepy, talking) and 6 photo-real effects | BlazeFace and a 478-point face mesh; effects drawn from the mesh |
 | **Color Finder** | Names the colour just past your fingertip | Median patch, nearest of 33 named colours in CIELAB |
 | **3D presenter** | A 3D person walks in, presents, waves, comments on what the AI sees, and leaves when it's quiet | Blender-rendered clips of a Microsoft Rocketbox avatar textured from a photo; a rule-based commentary engine |
-| **Kiosk** | Boots straight into the app and restarts it if it ever exits | Desktop auto-login, XDG autostart, `run.sh` watchdog |
+| **Kiosk** | Boots straight into the app, restarts it if it ever exits, and has an on-screen **Shut down** button (with confirmation) | Desktop auto-login, XDG autostart, `run.sh` watchdog, `systemctl poweroff` from the desktop session |
 
 ## Quick start (fresh Raspberry Pi)
 
